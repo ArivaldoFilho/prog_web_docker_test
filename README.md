@@ -60,26 +60,28 @@ Ele demonstra:
 
 ## 🏗 Arquitetura  
 
-### Estrutura de pastas
+## Estrutura de pastas
 
-# Estrutura de Pastas - Projeto Web Aula 27
-
-📦 projeto_web_aula_27
+```
+project/
+│
 ├── backend/               # API Node.js (Express)
-│   ├── server.js          # Código principal da API
-│   ├── package.json       # Dependências do backend
-│   ├── Dockerfile         # Configuração do container
+│   └── server.js          # Código principal da API
+│   └── package.json       # Dependências do backend
+│   └── Dockerfile         # Configuração do container
 │   └── .dockerignore      # Arquivos ignorados pelo Docker
+│
 ├── frontend/              # Camada de apresentação
-│   ├── index.html         # Página inicial
-│   ├── app.js             # Lógica do frontend
+│   └── index.html         # Página inicial
+│   └── app.js             # Lógica do frontend
 │   └── Dockerfile         # Container do frontend
+│
 ├── db/                    # Banco de Dados
 │   └── init.sql           # Script de inicialização
 ├── .env                   # Variáveis de ambiente
 ├── docker-compose.yml     # Orquestração dos serviços
 └── README.md              # Documentação do projeto
-
+```
 
 ## 🚀 Como executar o projeto
 
