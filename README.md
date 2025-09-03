@@ -62,25 +62,23 @@ Ele demonstra:
 
 ### Estrutura de pastas
 
+# Estrutura de Pastas - Projeto Web Aula 27
 
 📦 projeto_web_aula_27
-├── backend/ # API Node.js (Express)
-│ ├── server.js # Código principal da API
-│ ├── package.json # Dependências do backend
-│ ├── Dockerfile # Configuração do container
-│ └── .dockerignore
-│
-├── frontend/ # Camada de apresentação
-│ ├── index.html # Página inicial
-│ ├── app.js # Lógica frontend
-│ └── Dockerfile # Container do frontend
-│
-├── db/ # Banco de Dados
-│ └── init.sql # Script de inicialização
-│
-├── .env # Variáveis de ambiente
-├── docker-compose.yml # Orquestração dos serviços
-└── README.md
+├── backend/               # API Node.js (Express)
+│   ├── server.js          # Código principal da API
+│   ├── package.json       # Dependências do backend
+│   ├── Dockerfile         # Configuração do container
+│   └── .dockerignore      # Arquivos ignorados pelo Docker
+├── frontend/              # Camada de apresentação
+│   ├── index.html         # Página inicial
+│   ├── app.js             # Lógica do frontend
+│   └── Dockerfile         # Container do frontend
+├── db/                    # Banco de Dados
+│   └── init.sql           # Script de inicialização
+├── .env                   # Variáveis de ambiente
+├── docker-compose.yml     # Orquestração dos serviços
+└── README.md              # Documentação do projeto
 
 
 ## 🚀 Como executar o projeto
@@ -92,17 +90,19 @@ Ele demonstra:
    cd projeto_web_aula_27
 
 2. Configure as variáveis de ambiente no arquivo .env:
+    ```bash
     POSTGRES_USER=usuario
     POSTGRES_PASSWORD=senha
     POSTGRES_DB=meubanco
 
 3. Suba os containers:
+    ```bash
     docker-compose up --build
 
 4. Acesse os serviços:
 
-🌍 Frontend → http://localhost:8080
+    🌍 Frontend → http://localhost:8080
 
-⚙️ Backend API → http://localhost:3000
+    ⚙️ Backend API → http://localhost:3000
 
-🗄 Banco de Dados → localhost:5432
+    🗄 Banco de Dados → localhost:5432
