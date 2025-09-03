@@ -1,68 +1,108 @@
-# Projeto Web – Aula 27
-# 📘 Projeto Web – Aula 27
+# 🌐 Projeto Web – Aula 27  
+
+📘 **Projeto didático de desenvolvimento Full Stack com Docker Compose**  
 
 ![Capa do Projeto](https://img.shields.io/badge/Projeto-Web-blue)  
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)  
-![Licença](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-yellow)  
+![Licença](https://img.shields.io/badge/license-MIT-green)  
 
 ---
 
 ## 📑 Índice
-- [Sobre o projeto](#-sobre-o-projeto)
-- [Status](#-status)
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologias utilizadas](#-tecnologias-utilizadas)
-- [Banco de Dados](#-banco-de-dados)
-- [Contribuidores](#-contribuidores)
-- [Licença](#-licença)
+- [📖 Sobre o projeto](#-sobre-o-projeto)  
+- [🚧 Status](#-status)  
+- [⚙️ Funcionalidades](#️-funcionalidades)  
+- [🛠 Tecnologias utilizadas](#-tecnologias-utilizadas)  
+- [🏗 Arquitetura](#-arquitetura)  
+- [🗄 Banco de Dados](#-banco-de-dados)  
+- [🚀 Como executar o projeto](#-como-executar-o-projeto)  
+- [📡 Exemplos de uso (API)](#-exemplos-de-uso-api)  
+- [🐳 Comandos úteis do Docker](#-comandos-úteis-do-docker)  
+- [🤝 Contribuidores](#-contribuidores)  
+- [📜 Licença](#-licença)  
 
 ---
 
 ## 📖 Sobre o projeto
-Este repositório organiza em um monorepo as camadas de frontend, backend e banco de dados, totalmente integradas e orquestradas via Docker Compose.
+Este projeto organiza em um **monorepo** as camadas de **frontend, backend e banco de dados**, totalmente integradas e orquestradas via **Docker Compose**.  
 
-O projeto foi desenvolvido com finalidade didática (Aula 27), servindo como laboratório para práticas de desenvolvimento full-stack em um ambiente controlado e realista.
+🎯 Objetivo didático: servir como **laboratório de práticas full-stack**, mostrando como estruturar, configurar e executar um projeto moderno de forma rápida e padronizada.  
 
-Ele demonstra, de forma prática:
+Ele demonstra:
+- Separação clara entre camadas: **apresentação, lógica de negócio e persistência de dados**;  
+- Uso de contêineres para **portabilidade e consistência** do ambiente;  
+- Fluxo simples de execução → ideal para iniciantes e revisores de conceitos.  
 
-Como estruturar um projeto com múltiplos serviços;
-
-A importância da separação entre camadas (apresentação, lógica de negócio e persistência de dados);
-
-O uso de contêineres para garantir portabilidade, padronização e rapidez na configuração do ambiente;
-
-Um fluxo simples de execução, pensado tanto para iniciantes quanto para quem já tem experiência e deseja revisar conceitos de integração.
 ---
 
-## 📌 Status
-> 🚧 Projeto em desenvolvimento 🚧
+## 🚧 Status
+> 🛠 Em desenvolvimento – novas funcionalidades serão adicionadas em breve!  
 
 ---
 
 ## ⚙️ Funcionalidades
-- [x] API backend em Node.js
-- [x] Frontend em HTML/JS
-- [x] Orquestração com Docker Compose
-- [ ] Autenticação de usuários
-- [ ] Testes automatizados
+✅ API backend em Node.js (Express)  
+✅ Frontend em HTML/JS simples  
+✅ Banco de Dados PostgreSQL inicializado via script  
+✅ Orquestração com Docker Compose  
+🔜 Autenticação de usuários  
+🔜 Testes automatizados  
 
 ---
 
 ## 🛠 Tecnologias utilizadas
-- **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: Node.js (Express)  
-- **Banco de Dados**: PostgreSQL (padrão, pode ser trocado)  
-- **Orquestração**: Docker e Docker Compose  
+- **Frontend** → HTML, CSS, JavaScript  
+- **Backend** → Node.js + Express  
+- **Banco de Dados** → PostgreSQL  
+- **Infra** → Docker & Docker Compose  
 
 ---
+
+## 🏗 Arquitetura  
+
+### Estrutura de pastas
+
+
+📦 projeto_web_aula_27
+├── backend/ # API Node.js (Express)
+│ ├── server.js # Código principal da API
+│ ├── package.json # Dependências do backend
+│ ├── Dockerfile # Configuração do container
+│ └── .dockerignore
+│
+├── frontend/ # Camada de apresentação
+│ ├── index.html # Página inicial
+│ ├── app.js # Lógica frontend
+│ └── Dockerfile # Container do frontend
+│
+├── db/ # Banco de Dados
+│ └── init.sql # Script de inicialização
+│
+├── .env # Variáveis de ambiente
+├── docker-compose.yml # Orquestração dos serviços
+└── README.md
+
 
 ## 🚀 Como executar o projeto
 
 ### Com Docker
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/Guilh3rme/projeto_web_aula_27.git
+   git clone https://github.com/ArivaldoFilho/prog_web_docker_test.git
    cd projeto_web_aula_27
 
+2. Configure as variáveis de ambiente no arquivo .env:
+    POSTGRES_USER=usuario
+    POSTGRES_PASSWORD=senha
+    POSTGRES_DB=meubanco
 
+3. Suba os containers:
+    docker-compose up --build
 
+4. Acesse os serviços:
+
+🌍 Frontend → http://localhost:8080
+
+⚙️ Backend API → http://localhost:3000
+
+🗄 Banco de Dados → localhost:5432
